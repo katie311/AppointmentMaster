@@ -1,0 +1,12 @@
+<br>
+<h1>Doctors</h1>
+<%= link_to 'Add Doctor', new_doctor_path %>
+<hr />
+<h2><%= @doctors.length <= 0 ? "No doctors" : "" %></h2> 
+<div class="ui list">
+  <% @doctors.each do |doctor| %>
+    <li class="list item">
+      <%= link_to doctor.full_name, doctor %>—<%= link_to doctor.specialty, doctor %>
+    </li>
+  <% end %>
+</div
